@@ -2,7 +2,6 @@
 # Ivan Norman and Destenie Nock
 
 # Introduction
-Introduce the problem here. You need to define pareto and Dominance, and non-dominated portfolios here
 In Nock’s research, a model was created to evaluate portfolios comprised of different energy sources. Here the goal is to identify which portfolios are the best. The solution to this is to create a model that would perform a non dominated pareto sort, to reveal which portfolios are the best. Given two portfolios A and B, A dominates B if A is better or equal to in every category, and strictly greater than B in at least one category. B is non-dominated by A if the previous rule is violated. The data for the portfolios are contained in a table where the columns contain a single portfolios and the rows contain the criteria. In this paper we will describe the method of determining the non-dominated set of portfolios, for seven criteria, using a quicksort implementation. 
 
 # How it works
