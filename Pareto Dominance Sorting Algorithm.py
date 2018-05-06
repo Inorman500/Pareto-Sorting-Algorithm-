@@ -3,7 +3,7 @@ import pandas as  pd
 import time
 import numpy as np
 import string
-def quick_sort(): # this algorithm uses a copy of the oringinal DAtaframe by defauult.
+def quick_sort(): # this algorithm uses a copy of the original Dataframe by default.
     # Changes to the dataframe are made by loading and saving from a pickle file.
     # Directory of pickle file is the root of the project
     df = pd.read_pickle(fileName)
@@ -17,7 +17,7 @@ def short_sort(left,right,size):# This function hadles the differnt cornner case
     :return: Nothing
     """
     df = pd.read_pickle(fileName)  # loading the dataframe to make changes
-    if (size<=1): # no noeed to sort
+    if (size<=1): # no need to sort
         return
     if(size==2):# swap the left and right
         if (df.iloc[0,left] <df.iloc[0,right]):
@@ -155,7 +155,7 @@ while(col< len(Sorted_df.columns)):# while we did not reach the end of the array
             col += 1 #we already checked the first two collums
     else:
         item_1 =Sorted_df[[col_list[col]]] # the column we want to compare in the dataframe
-        pos = 0 #tracking the positin of collumns
+        pos = 0 #tracking the position of collumns
 
         while (pos < len(non_dominated_cols)): # comparing Item 1 to the non-dominated set
             if (isDominated(non_dominated_cols[pos], item_1) == True):
@@ -170,7 +170,7 @@ while(col< len(Sorted_df.columns)):# while we did not reach the end of the array
 non_dominated_df=pd.concat(non_dominated_cols, axis=1) # Combine all the non-dominated columns into ome dataframe
 
 writer = pd.ExcelWriter('Non_Dominated portfolio.xlsx') # initialize a new sheet
-non_dominated_df.to_excel(writer,'Sheet1') # Add the non Dominated porfolios to the sheet
+non_dominated_df.to_excel(writer,'Sheet1') # Add the non Dominated portfolios to the sheet
 writer.save() # save the sheet
 
 
